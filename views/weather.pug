@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Get current weather of you city</title>
+    link(rel="stylesheet", href="/static/css/style.css")
+    <link rel="stylesheet" href="/static/css/weather.css">
+    <script src="https://kit.fontawesome.com/aa19909f03.js" crossorigin="anonymous"></script>
+
+</head>
+
+<body>
+    include common/navbar.pug
+    <div class="container">
+        <div class="search_box">
+            <form action="">
+                <input type="text" name="search" id="search-bar" autocomplete="off" placeholder="Enter your city name">
+                <input type="submit" value="Search" id="serach-btn">
+            </form>
+        </div>
+        <div class="tempINformation">
+            <div class="top_layer">
+                <p id="day">Friday</p>
+                <p id="today-date">13 OCT</p>
+            </div>
+            <div class="main_layer">
+                <p id="city_name">Get your output here</p>
+                <div id="middle_layer">
+                    <p id="temp"><span class="temp_data" >0</span><sup>o</sup>C</p>
+                    <p id="city_name" class="desc"></p>
+
+
+                </div>
+            </div>
+        </div>
+
+    </div>
+    include common/footer.pug
+
+    script(src="/static/js/main.js")    
+</body>
+
+</html>
