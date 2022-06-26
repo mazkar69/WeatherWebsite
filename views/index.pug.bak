@@ -17,7 +17,7 @@
         <div class="leftContant">
             <h3>Welcome to weather App</h3>
             <h1>Get The Latest <span>Weather</span> Info Of Your city</h1>
-            <button><a href="/weather">Check Now</a></button>
+            <button>Check Now</button>
 
         </div>
         <div class="rightContant">

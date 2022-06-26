@@ -1,19 +1,23 @@
-const express = require("express")
+
+const express = require("express");
 const app = express();
-const pug = require("pug")
+const port = process.env.PORT || 5000;  
 const path = require("path")
+const pug = require("pug")
 
-const port = process.env.PORT || 5000;
+
+//Static folder path
+ const staticPath = path.join(__dirname,"/static")
 
 
-// setting static file
+// app.use(express.static(staticPath))
 app.use("/static",express.static("static"))
-app.use(express.urlencoded())     //help to get the value from the form 
+app.use(express.urlencoded())       //Help to get the data from the form if the req type is post .
 
 
-// Setting the template engine
-app.set("view engine","pug")
-app.set("views",path.join(__dirname,"views"))
+// Setting the template engine.
+app.set('view engine','pug')
+app.set("views",path.join(__dirname,"views"))       //Secound argument is the name of folder.
 
 
 
