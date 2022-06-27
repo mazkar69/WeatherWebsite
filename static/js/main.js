@@ -3,10 +3,20 @@ const sbtm = document.getElementById("serach-btn");
 const inputtext = document.getElementById("search-bar");
 const tempData = document.querySelector(".temp_data")
 const desc = document.querySelector(".desc")
-
+const days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+const date_point = document.getElementById("today-date");
+const day_point = document.getElementById("day");
 // console.log(tempData)
+const d = new Date();
+date = d.getDate();
+let day = days[d.getDay()];
+console.log(day)
+
+date_point.innerText = date;
+day_point.innerText = day;
 
 sbtm.addEventListener("click",async (e)=>{
+    status.innerText = "Get Your Output Here:";
     e.preventDefault();
     const locationName = inputtext.value;
     
@@ -26,7 +36,9 @@ sbtm.addEventListener("click",async (e)=>{
     
 
         }catch{
-            status.innerText = "Write city name properly."
+            status.innerText = "Sorry, No record available for this city."
+            tempData.innerHTML = "";
+            desc.innerText = "";
             
 
         }    
